@@ -1,6 +1,5 @@
 # Parse is dead, long live Parse!
 
-
 # Quick Parse Intro
 
 It’s the M of MVC. M on steroids.
@@ -45,7 +44,6 @@ It’s the M of MVC. M on steroids.
 - PFConfig
   - Useful
 
-
 # Moving on!
 
 http://savvyapps.com/blog/parse-server-missing-features-solutions-migration
@@ -65,15 +63,11 @@ http://savvyapps.com/blog/parse-server-missing-features-solutions-migration
 
 https://d2mxuefqeaa7sj.cloudfront.net/s_E85944108094AE6CE2F541F64B50AED8628CB35F29860EFE7252FB2993F0CC11_1457345789013_comparison3.png
 
-
-
-
 # Solutions
 
 Parse Hosting vs DIY vs DIHY (Do It Hard Yourself)
 https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide
 [ParsePlatform/parse-server#38](https://github.com/ParsePlatform/parse-server/issues/38)
-
 
 ## Parse Alternative
 
@@ -83,8 +77,7 @@ Any non open source alternative might end up with the same issue than Parse but 
 
 ## Parse 3rd party hosting
 
-
-### **Node Chef**
+### Node Chef
 
 https://nodechef.com/
 https://nodechef.com/parse-server
@@ -100,7 +93,6 @@ Cons
 - Pricing
 - Eventual limitation
 - Eventual region restriction
-
 
 ## Parse Self Hosting - DIY
 
@@ -125,7 +117,6 @@ Using all the open source package (see below)
 ## Parse Self Hosting - DIHY
 
 Parse Server provide a docker config.
-
 
 ### Pros
 - Cheap
@@ -152,7 +143,6 @@ Super easy using parse migration tools:
 http://blog.parse.com/announcements/parse-migration-guides-discounts-and-events/
 http://blog.parse.com/announcements/introducing-parse-server-and-the-database-migration-tool/
 
-
 ## Notes
 - Use US-East Hosting (Virginia) to match Parse Hosting.
 - 3-4 times the data size currently used by your Parse application. Available in 'Analytics' > 'Overview'.
@@ -166,7 +156,6 @@ $0 for prototyping/testing
 Create a new mongodb instance, use Parse DB migration tools using the mongo URI.
 Nice integration with Heroku.
 Enjoy the “secret” table (heroku link).
-
 
 ## ObjectRocket
 
@@ -185,7 +174,6 @@ Not tested
 https://github.com/ParsePlatform/parse-server-example
 https://github.com/ParsePlatform/parse-server#getting-started
 https://github.com/ParsePlatform/parse-server/wiki/Compatibility-with-Hosted-Parse
-
 
 - Automatic creation of classes by the client is always allowed in Parse Server.
 - Class Level Permissions supported (edit directly the SCHEMA’s collection)
@@ -218,7 +206,6 @@ curl -X POST \
    -d '{}' \
    https://localhost:1337/parse/functions/hello
 
-
 # remote
 vi app.json
 # update keys, url, db uri.
@@ -232,7 +219,6 @@ curl -X POST \
    -d '{}' \
    https://yourapp.herokuapp.com/parse/functions/hello
 ```
-
 
 ## OAuth
 
@@ -256,7 +242,6 @@ Parse server support storing file in MongoDB by default, but recommend to use S3
 Also, you will need to migrate your file hosted on Parse S3 instance before service shutdown.
 http://blog.parse.com/announcements/hosting-files-on-parse-server/
 
-
 ## Config (PFConfig)
 
 Trivial to re-implement on node express
@@ -270,7 +255,6 @@ app.get('/parse/config', function(req, res) {
   readable.pipe(res);
 });
 ```
-
 
 ## Background Jobs
 
@@ -290,7 +274,6 @@ git clone git@github.com:ParsePlatform/parse-dashboard.git
 cd parse-dashboard
 npm install
 vi Parse-Dashboard/parse-dashboard-config.json
-
 
 {
   "apps": [
@@ -334,7 +317,6 @@ git push heroku master
 open "http://yourapp.herokuapp.com"
 ```
 
-
 ### Pros
 - The one we know
 - Customizable
@@ -362,13 +344,11 @@ http://blog.parse.com/announcements/parse-server-push-notifications/
 ### Pros
 - Similar to Parse 
 
-
 ### Cons
 - Delivery or re-delivery handling?
 - Error handling
 - Scheduling
 
-```
 ```
 var api = new ParseServer({
   ...
