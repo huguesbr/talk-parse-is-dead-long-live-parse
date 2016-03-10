@@ -1,5 +1,11 @@
 # Parse is dead, long live Parse!
 
+Talk's slide available here: https://github.com/huguesbr/talk-parse-is-dead-long-live-parse/releases/download/v1.0/slides.pdf
+
+Dropbox's paper version: https://paper.dropbox.com/doc/Parse-is-dead-long-live-Parse-aDQc136PaA0Sy9Cd5Tf1l
+
+This document is the draft use to build the talk's slide.
+
 # Quick Parse Intro
 
 It’s the M of MVC. M on steroids.
